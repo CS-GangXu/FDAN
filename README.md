@@ -1,6 +1,14 @@
 # FDAN
 The official PyTorch implementation for FDAN.
 
+# Requirement
+```
+opencv-python==4.5.1.48
+torch==1.5.0
+numpy==1.18.4
+scikit-image==0.17.2
+```
+
 # Dataset
 You can download our SRITM-4K test set from [Baidu Netdisk (code: fhyt)](https://pan.baidu.com/s/1KD035L8UbrQrnd8hRNiB6A?pwd=fhyt). And then put the 'test' folder into the 'data/sritm-4k' folder.
 

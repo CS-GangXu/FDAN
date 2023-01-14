@@ -2,17 +2,11 @@ import cv2
 import os
 import glob
 import torch
-import numpy as np
+import numpy as np 
 import skimage.metrics as sm
 from tqdm import tqdm
-import time
-from torchscan import summary
 import argparse
-import scipy.io as sio
 from utils import *
-import sys
-from thop import profile
-from fvcore.nn import FlopCountAnalysis
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--config', type=str, default='./config/fdan_sritm4k_scale16.yaml')
