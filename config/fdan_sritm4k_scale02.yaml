@@ -1,0 +1,29 @@
+MANUAL_SEED: 0
+MODEL:
+  PY_FILE: networks/netx5v000/fdan.py
+  PLUS: False
+  ACTIVATION: 'relu'
+  SCALE: 2
+DATASET:
+  PY_FILE: datasets/sritm/sritm4k.py
+  BATCH_SIZE_PER_GPU: 32
+  NUM_WORKERS: -1
+  DIVIDE_VALID: False
+  TRAIN_DATAROOT_GT: '/home/ubuntu/Dataset/sritm4k/train/scale_02/hr/10bit'
+  TRAIN_DATAROOT_LQ: '/home/ubuntu/Dataset/sritm4k/train/scale_02/lr/08bit'
+  VALID_DATAROOT_GT: '/home/ubuntu/Dataset/sritm4k/test/scale_02/hr/10bit'
+  VALID_DATAROOT_LQ: '/home/ubuntu/Dataset/sritm4k/test/scale_02/lr/08bit'
+  BATCH_SIZE_VALID: 1
+MAX_EPOCH: 40
+VALID_PERIOD_EPOCH: 4
+STEP:
+  SHOW: 100
+OPTIMIZER:
+  LEARNING_RATE: !!float 5e-5
+  WEIGHT_DECAY: !!float 1e-4
+INITIALIZER:
+  NAME: Xavier Normal
+SCHEDULER:
+  NAME: 'CosineAnnealingWarmRestarts'
+  T_MULT: 1
+  T_0: 9376
